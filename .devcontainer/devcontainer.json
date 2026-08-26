@@ -1,0 +1,33 @@
+{
+  "features": {
+    "ghcr.io/devcontainers/features/node:2": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "postStartCommand": "./.devcontainer/postStartCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mutantdino.resourcemonitor",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "anthropic.claude-code",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-yaml",
+        "ms-python.flake8",
+        "ms-python.isort",
+        "MS-vsliveshare.vsliveshare",
+        "ms-python.black-formatter"
+      ],
+      "settings": {
+        "git.autofetch": true
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+name: kata-setup-python-devcontainer
+services:
+
+  devcontainer:
+    build:
+      context: ..
+      dockerfile: ./.devcontainer/Dockerfile
+    environment:
+      OPENSPEC_TELEMETRY: 0
+    volumes:
+      - ..:/workspace:cached
+      - ${HOME}/.claude:/home/vscode/.claude:cached
